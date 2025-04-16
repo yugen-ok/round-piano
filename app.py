@@ -1,4 +1,5 @@
 from flask import Flask, render_template_string
+import math
 
 app = Flask(__name__)
 
@@ -382,7 +383,7 @@ def index():
             }
 
             // Create audio buffer for a given frequency
-            function createAudioBuffer(frequency, duration = 1.0) {
+            function createAudioBuffer(frequency, duration = .5) {
                 if (!audioContext) return null;
 
                 const sampleRate = audioContext.sampleRate;
